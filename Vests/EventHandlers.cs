@@ -68,7 +68,7 @@ namespace Vests
 
                 if (armorValue <= 0)
                 {
-                    ev.Player.ShowManagedHint("Бронежилет нуждается в починке.");
+                    ev.Player.ShowHint("Бронежилет нуждается в починке.");
                 }
             }
         }
@@ -87,7 +87,7 @@ namespace Vests
             {
                 if (ev.Player.Inventory.TryGetBodyArmorAndItsSerial(out _, out ushort serial) && bodyArmors.TryGetValue(serial, out float armorValue) && armorValue <= 0)
                 {
-                    ev.Player.ShowManagedHint("Снимите бронежилет.");
+                    ev.Player.ShowHint("Снимите бронежилет.");
                     ev.IsAllowed = false;
                 }
             }
@@ -104,7 +104,7 @@ namespace Vests
                     if (bodyArmors[serial] < 0)
                     {
                         bodyArmors[serial] = 0;
-                        ev.Player.ShowManagedHint("Бронежилет нуждается в починке.");
+                        ev.Player.ShowHint("Бронежилет нуждается в починке.");
                     }
                 }
             }
