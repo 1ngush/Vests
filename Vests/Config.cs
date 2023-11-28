@@ -1,7 +1,7 @@
-﻿using Exiled.API.Interfaces;
-
-namespace Vests
+﻿namespace Vests
 {
+    using Exiled.API.Interfaces;
+
     public class Config : IConfig
     {
         public bool IsEnabled { get; set; } = true;
